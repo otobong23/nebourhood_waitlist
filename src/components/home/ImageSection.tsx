@@ -59,18 +59,13 @@ const ImageSection = () => {
    )
    return (
       <div className="w-full flex justify-center overflow-hidden relative">
-         <motion.div
-            initial={{ opacity: 0.5 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'linear' }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="min-w-241.5 flex justify-center z-10">
+         <div className="min-w-241.5 flex justify-center z-10">
             <Image
                src={generated_image_female}
                alt="hero page female image"
                className="object-cover xl:w-screen"
             />
-         </motion.div>
+         </div>
 
          <MobileBoxes />
          <DesktopBoxes />
