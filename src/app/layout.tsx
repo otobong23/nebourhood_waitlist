@@ -9,7 +9,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Nebourhood",
-  description: "Nebourhood app",
+  description: "Nebourhood Waitlist",
 };
 
 export const viewport: Viewport = {
