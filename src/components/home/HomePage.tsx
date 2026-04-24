@@ -119,7 +119,7 @@ const HomePage = () => {
                 <div className="flex pt-4 gap-2">
                   {socials.map(({ icon, href }) => (
                     <Link key={icon} href={href} className="text-black">
-                      <Icon icon={icon} width={26} height={26} className={``} />
+                      <Icon icon={icon} width={30} height={30} className={``} />
                     </Link>
                   ))}
                 </div>
