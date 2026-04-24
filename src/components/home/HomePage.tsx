@@ -49,7 +49,7 @@ const HomePage = () => {
   return (
     <section>
 
-      <aside className="md:h-screen">
+      <aside>
         <header className={`flex justify-center bg-black my-4 md:my-11 py-6 rounded-full ${contentMargin}`}>
           <div id="logo">
             <Image src={logo} alt="logo" className="w-21.25px" />
