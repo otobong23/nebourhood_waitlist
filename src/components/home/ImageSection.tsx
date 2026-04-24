@@ -6,21 +6,25 @@ import { motion } from 'framer-motion'
 const ImageSection = () => {
 
    const MobileBoxes = () => (
-      <motion.div
-         initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}
-         transition={{ duration: 0.6, ease: 'easeOut' }}
-         viewport={{ once: true, amount: 0.3 }}
+      <div
+         // initial={{ opacity: 0 }}
+         // whileInView={{ opacity: 1 }}
+         // transition={{ duration: 0.6, ease: 'easeOut' }}
+         // viewport={{ once: true, amount: 0.3 }}
          className='grid grid-cols-4 grid-rows-6 absolute inset-0 z-20 md:hidden' style={{ perspective: '1000px' }}
       >
          {mobileColorMap.map((color, i) => (
-            <div
+            <motion.div
+               initial={{ scale: 0 }}
+               whileInView={{ scale: 1 }}
+               transition={{ duration: 0.3, ease: 'linear', delay: i * 0.1 }}
+               viewport={{ once: true, amount: 0.3 }}
                key={'mobileBox_' + i}
                className="relative transform transition-transform duration-300 ease-in-out hover:scale-125 hover:transform-[rotateZ(180deg)] active:scale-125 active:transform-[rotateZ(180deg)]"
                style={{ background: color, transformStyle: 'preserve-3d' }}
             />
          ))}
-      </motion.div>
+      </div>
    )
 
    const DesktopBoxes = () => (
@@ -55,13 +59,18 @@ const ImageSection = () => {
    )
    return (
       <div className="w-full flex justify-center overflow-hidden relative">
-         <div className="min-w-241.5 flex justify-center z-10">
+         <motion.div
+            initial={{ opacity: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'linear' }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="min-w-241.5 flex justify-center z-10">
             <Image
                src={generated_image_female}
                alt="hero page female image"
                className="object-cover xl:w-screen"
             />
-         </div>
+         </motion.div>
 
          <MobileBoxes />
          <DesktopBoxes />
