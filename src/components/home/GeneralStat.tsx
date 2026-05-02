@@ -6,14 +6,14 @@ import { useEffect } from "react";
 
 const GeneralStat = () => {
    const Day = 24 * 60 * 60 * 1000 //24 hours
-   const startDateStamp = 1776926471412
+   const startDateStamp = 1777762298526
 
    // Start with 0 (same on server + client)
    const [timeRemaining, handleTimeRemaining] = useFormatTime(0);
 
    useEffect(() => {
     const updateTimer = () => {
-      const remaining = (startDateStamp + 5 * Day) - Date.now();
+      const remaining = (startDateStamp + 20 * Day) - Date.now();
 
       if (remaining <= 0) {
         handleTimeRemaining(0);
