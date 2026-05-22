@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const GeneralStat = () => {
    const Day = 24 * 60 * 60 * 1000 //24 hours
-   const startDateStamp = 1777762298526
+   const startDateStamp = 1779456386810
 
    // Start with 0 (same on server + client)
    const [timeRemaining, handleTimeRemaining] = useFormatTime(0);
